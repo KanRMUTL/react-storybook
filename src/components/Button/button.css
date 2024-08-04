@@ -1,0 +1,55 @@
+.button {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+}
+
+.primary {
+  color: #FFFFFF;
+  background:  #D22E25;
+  border-color: #D22E25;
+}
+
+.secondary {
+  color:  #D22E25;
+  background:  #FAE6E5;
+  border-color: #D22E25;
+}
+
+.success {
+  color: #FFFFFF;
+  background:  #4A9500;
+  border-color: #4A9500;
+}
+
+.warning {
+  color: #EB7100;
+  background:  #FEFAE8;
+  border-color: #EB7100;
+}
+
+.solid {
+  border-radius: 0px;
+}
+
+.rounded {
+  border-radius: 100px;
+}
+
+.small {
+  padding: 8px 16px;
+  font-size: 0.7rem;
+  border: 1px solid;
+}
+
+.medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 14px 28px;
+  font-size: 1.4rem;
+}
