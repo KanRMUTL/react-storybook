@@ -1,11 +1,11 @@
 import "./button.css";
 
-type ButtonProps = {
+interface ButtonProps {
   label: string;
   color: "primary" | "secondary" | "success" | "warning";
   border: "solid" | "rounded";
   size: "small" | "medium" | "large";
-};
+}
 
 const Button = ({
   label = "",
