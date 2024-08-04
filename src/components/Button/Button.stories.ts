@@ -1,5 +1,3 @@
-// Button.stories.tsx
-
 import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
 import './button.css';
@@ -12,9 +10,15 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const Default: Story = {
+  args: {
+    label: 'Button',
+  },
+};
+
 export const PrimarySolidSmall: Story = {
   args: {
-    label: 'Primary Solid Small',
+    ...Default.args,
     color: 'primary',
     border: 'solid',
     size: 'small',
@@ -23,52 +27,42 @@ export const PrimarySolidSmall: Story = {
 
 export const PrimarySolidMedium: Story = {
   args: {
-    label: 'Primary Solid Medium',
-    color: 'primary',
-    border: 'solid',
+    ...PrimarySolidSmall.args,
     size: 'medium',
   }
 };
 
 export const PrimarySolidLarge: Story = {
   args: {
-    label: 'Primary Solid Large',
-    color: 'primary',
-    border: 'solid',
+    ...PrimarySolidMedium.args,
     size: 'large',
   }
 };
 
 export const PrimaryRoundedSmall: Story = {
   args: {
-    label: 'Primary Rounded Small',
-    color: 'primary',
+    ...PrimarySolidSmall.args,
     border: 'rounded',
-    size: 'small',
   }
 };
 
 export const PrimaryRoundedMedium: Story = {
   args: {
-    label: 'Primary Rounded Medium',
-    color: 'primary',
-    border: 'rounded',
+    ...PrimaryRoundedSmall.args,
     size: 'medium',
   }
 };
 
 export const PrimaryRoundedLarge: Story = {
   args: {
-    label: 'Primary Rounded Large',
-    color: 'primary',
-    border: 'rounded',
+    ...PrimaryRoundedMedium.args,
     size: 'large',
   }
 };
 
 export const SecondarySolidSmall: Story = {
   args: {
-    label: 'Secondary Solid Small',
+    ...Default.args,
     color: 'secondary',
     border: 'solid',
     size: 'small',
@@ -77,52 +71,42 @@ export const SecondarySolidSmall: Story = {
 
 export const SecondarySolidMedium: Story = {
   args: {
-    label: 'Secondary Solid Medium',
-    color: 'secondary',
-    border: 'solid',
+    ...SecondarySolidSmall.args,
     size: 'medium',
   }
 };
 
 export const SecondarySolidLarge: Story = {
   args: {
-    label: 'Secondary Solid Large',
-    color: 'secondary',
-    border: 'solid',
+    ...SecondarySolidMedium.args,
     size: 'large',
   }
 };
 
 export const SecondaryRoundedSmall: Story = {
   args: {
-    label: 'Secondary Rounded Small',
-    color: 'secondary',
+    ...SecondarySolidSmall.args,
     border: 'rounded',
-    size: 'small',
   }
 };
 
 export const SecondaryRoundedMedium: Story = {
   args: {
-    label: 'Secondary Rounded Medium',
-    color: 'secondary',
-    border: 'rounded',
+    ...SecondaryRoundedSmall.args,
     size: 'medium',
   }
 };
 
 export const SecondaryRoundedLarge: Story = {
   args: {
-    label: 'Secondary Rounded Large',
-    color: 'secondary',
-    border: 'rounded',
+    ...SecondaryRoundedMedium.args,
     size: 'large',
   }
 };
 
 export const SuccessSolidSmall: Story = {
   args: {
-    label: 'Success Solid Small',
+    ...Default.args,
     color: 'success',
     border: 'solid',
     size: 'small',
@@ -131,52 +115,42 @@ export const SuccessSolidSmall: Story = {
 
 export const SuccessSolidMedium: Story = {
   args: {
-    label: 'Success Solid Medium',
-    color: 'success',
-    border: 'solid',
+    ...SuccessSolidSmall.args,
     size: 'medium',
   }
 };
 
 export const SuccessSolidLarge: Story = {
   args: {
-    label: 'Success Solid Large',
-    color: 'success',
-    border: 'solid',
+    ...SuccessSolidMedium.args,
     size: 'large',
   }
 };
 
 export const SuccessRoundedSmall: Story = {
   args: {
-    label: 'Success Rounded Small',
-    color: 'success',
+    ...SuccessSolidSmall.args,
     border: 'rounded',
-    size: 'small',
   }
 };
 
 export const SuccessRoundedMedium: Story = {
   args: {
-    label: 'Success Rounded Medium',
-    color: 'success',
-    border: 'rounded',
+    ...SuccessRoundedSmall.args,
     size: 'medium',
   }
 };
 
 export const SuccessRoundedLarge: Story = {
   args: {
-    label: 'Success Rounded Large',
-    color: 'success',
-    border: 'rounded',
+    ...SuccessRoundedMedium.args,
     size: 'large',
   }
 };
 
 export const WarningSolidSmall: Story = {
   args: {
-    label: 'Warning Solid Small',
+    ...Default.args,
     color: 'warning',
     border: 'solid',
     size: 'small',
@@ -185,45 +159,35 @@ export const WarningSolidSmall: Story = {
 
 export const WarningSolidMedium: Story = {
   args: {
-    label: 'Warning Solid Medium',
-    color: 'warning',
-    border: 'solid',
+    ...WarningSolidSmall.args,
     size: 'medium',
   }
 };
 
 export const WarningSolidLarge: Story = {
   args: {
-    label: 'Warning Solid Large',
-    color: 'warning',
-    border: 'solid',
+    ...WarningSolidMedium.args,
     size: 'large',
   }
 };
 
 export const WarningRoundedSmall: Story = {
   args: {
-    label: 'Warning Rounded Small',
-    color: 'warning',
+    ...WarningSolidSmall.args,
     border: 'rounded',
-    size: 'small',
   }
 };
 
 export const WarningRoundedMedium: Story = {
   args: {
-    label: 'Warning Rounded Medium',
-    color: 'warning',
-    border: 'rounded',
+    ...WarningRoundedSmall.args,
     size: 'medium',
   }
 };
 
 export const WarningRoundedLarge: Story = {
   args: {
-    label: 'Warning Rounded Large',
-    color: 'warning',
-    border: 'rounded',
+    ...WarningRoundedMedium.args,
     size: 'large',
   }
 };
