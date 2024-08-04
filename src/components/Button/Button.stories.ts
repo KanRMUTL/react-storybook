@@ -5,6 +5,13 @@ import './button.css';
 const meta: Meta<typeof Button> = {
   title: 'Main/Button',
   component: Button,
+  argTypes: {
+    color: {
+      control: {
+        type: 'select'
+      }
+    }
+  }
 } satisfies Meta<typeof Button>;
 
 export default meta;
